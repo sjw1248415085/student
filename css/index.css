@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+ }
+ /* search_top */
+ .search_top {
+     position: fixed;
+     left: 50%;
+     top: 0;
+     width: 100%;
+     max-width: 540px;
+     min-width: 320px;
+     display: flex;
+     height: 44px;
+     border-top: 1px solid #ccc;
+     border-bottom: 1px solid #ccc;
+     background-color: #f6f6f6;
+     transform: translateX(-50%);
+ }
+
+ .search_top .search {
+     position: relative;
+    flex: 1;
+    height: 26px;
+    margin: 7px 10px;
+ }
+ .search_top .search input {
+     width: 100%;
+     height: 26px;
+     border-radius: 6px;
+     border: 1px solid #ccc;
+     box-shadow: 0px 1px 3px rgba(0, 0, 0, .3);
+     text-indent: 2em;
+     line-height: 26px;
+ }
+ .search_top .search::before {
+     position: absolute;
+     left: 8px;
+     top: 6px;
+     content: '';
+     width: 14px;
+     height: 14px;
+     background: url(../img/sprite.png) no-repeat -60px -280px;
+     background-size: 104px auto;
+ }
+ .search_top .user {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    font-size: 12px;
+    color: #099fde;
+}
+.search_top .user  i {
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin: 3px auto 0;
+    background: url(../img/sprite.png) no-repeat -59px -194px;
+    background-size: 104px auto;
+}
+/* banner */
+.banner img {
+    width: 100%;
+    margin-top: 46px;
+    margin-bottom: 5px;
+}
+/* local_nav */
+.local_nav {
+    display: flex;
+    margin: 3px 4px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.local_nav li {
+    flex: 1;
+    /* 给li再次开启flex布局控制里面的两个span */
+    display: flex;
+    /* 将默认的主轴x更改为Y */
+    flex-direction: column;
+    text-align: center;
+}
+.local_nav li span {
+    flex: 1;
+}
+.local_nav li  i {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 5px auto;
+    background: url(../img/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+
+.local_nav li:nth-child(2) i {
+    background-position-y: -32px;
+}
+.local_nav li:nth-child(3) i {
+    background-position-y: -64px;
+}
+.local_nav li:nth-child(4) i {
+    background-position-y: -96px;
+}
+.local_nav li:nth-child(5) i {
+    background-position-y: -128px;
+}
+/* jd_nav */
+.jd_nav {
+    display: flex;
+    margin: 3px 4px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.jd_nav li {
+    flex: 1;
+    text-align: center;
+}
+.jd_nav li i {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 5px auto;
+    background: url(../img/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+.jd_nav li:nth-child(2) i {
+    background-position-y: -32px;
+}
+.jd_nav li:nth-child(3) i {
+    background-position-y: -64px;
+}
+.jd_nav li:nth-child(4) i {
+    background-position-y: -96px;
+}
+.jd_nav li:nth-child(5) i {
+    background-position-y: -128px;
+}
+/* nav */
+.nav {
+    display: flex;
+    margin: 3px 4px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 6px;
+    /* 因为下面的li各占的比例是20% 所以我们需要换行*/
+    flex-wrap: wrap;
+}
+.nav li {
+    flex: 20%;
+    text-align: center;
+}
+.nav li i {
+    display: block;
+    width: 24px;
+    height: 23px;
+    margin: 6px auto;
+    background: url(../img/subnav-bg.png) no-repeat 0 0;
+    background-size: 24px auto;
+}
+.nav li:nth-child(2) i {
+    background-position-y: -23px;
+}
+.nav li:nth-child(3) i {
+    background-position-y: -54px;
+}
+.nav li:nth-child(4) i {
+    background-position-y: -84px;
+}
+.nav li:nth-child(5) i {
+    background-position-y: -110px;
+}
+/* nav_common */
+.nav_common {
+    overflow: hidden;
+    margin: 3px 4px;
+    border-radius: 10px;
+}
+.nav_common li {
+    display: flex;
+    height: 88px;
+}
+.nav_common li:nth-child(2) {
+    margin: 5px 0;
+}
+.nav_common li .items {
+    flex: 1;
+    /* 给li里面的div开启弹性布局 */
+    display: flex;
+    /* 将主轴设置为Y轴 */
+    flex-direction: column;
+
+}
+.nav_common li .items a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0,0,0,.3);
+}
+.nav_common li .items a:last-child {
+    border-bottom: 0;
+}
+.nav_common li .items:nth-child(3) a {
+    border-right: 0;
+}
+.nav_common li .items:first-child a {
+    background: url(../img/hotel.png) no-repeat center bottom;
+    background-size: 121px auto;
+}
+.nav_common li:nth-child(1) {
+    background: -webkit-linear-gradient(left, #78d65f, #55ca37);
+}
+.nav_common li:nth-child(2) {
+    background: -webkit-linear-gradient(left, #7666ff, #22c448);
+}
+.nav_common li:nth-child(3) {
+    background: -webkit-linear-gradient(left, #675423, #ff9532);
+}
+/* sales_hd */
+.sales_box {
+    margin: 3px 4px;
+    background-color: #fff;
+}
+.sales_hd {
+    height: 44px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.sales_hd h3 {
+    float: left;
+    width: 79px;
+    height: 15px;
+    margin-top: 15px;
+    margin-left: 10px;
+    background: url(../img/hot.png) no-repeat 0 -20px;
+    background-size: 79px auto;
+    font-size: 0;
+}
+.sales_hd a {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    height: 27px;
+    padding: 0 15px;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(left, #675423, #ff9532);
+    line-height: 27px;
+    color: #fff;
+    border-radius: 14px;
+}
+.sales_hd a::after {
+    position: absolute;
+    right: 8px;
+    top: 11px;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    transform: rotate(45deg);
+    border-left: 0;
+    border-bottom:0;
+}
+.sales_bd {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sales_bd li {
+    flex: 50%;
+    border-bottom: 1px solid #ccc;
+}
+.sales_bd li:nth-child(odd) {
+    border-right: 1px solid #ccc;
+}
+.sales_bd li img {
+    width: 100%;
+}
